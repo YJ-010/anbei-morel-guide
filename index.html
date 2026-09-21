@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17372d">
+  <meta name="description" content="面向蚌埠及皖北地区，以D152和1201为主推菌种，提供冷棚、棉被棚羊肚菌栽培技术、近五季气温参考、关键节点和技术服务。">
+  <title>皖北羊肚菌种植技术服务平台｜D152 · 1201</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317372d'/%3E%3Cpath d='M10 16C10 9 12.7 4.8 16 4.8S22 9 22 16c0 2.5-1.6 4.4-4.2 5.1V27h-3.6v-5.9C11.6 20.4 10 18.5 10 16Z' fill='%23d6a24a'/%3E%3Cpath d='M12.3 9.2 16 7l3.7 2.2-2.1 2.2 2.4 2.3-2.6 2.1 2 2.1-3.4 1.5-3.4-1.5 2-2.1-2.6-2.1 2.4-2.3Z' fill='none' stroke='%2317372d' stroke-width='1.4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M12.5 20c0-8.7 3.4-14 7.5-14s7.5 5.3 7.5 14c0 3.2-2 5.5-5.2 6.4V34h-4.6v-7.6c-3.2-.9-5.2-3.2-5.2-6.4Z"/><path class="mark-lines" d="m15.2 11.2 4.8-2.9 4.8 2.9-2.7 2.8 3.1 3-3.4 2.7 2.6 2.7-4.4 2-4.4-2 2.6-2.7-3.4-2.7 3.1-3Z"/></svg>
+        </span>
+        <span><strong>皖北羊肚菌</strong><small>D152 · 1201 技术服务</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">打开导航</span><span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主要导航">
+        <a href="#strain">主推菌种</a>
+        <a href="#team">团队创新</a>
+        <a href="#mode">棚型技术</a>
+        <a href="#tech">关键技术</a>
+        <a href="#disease">病虫识别</a>
+        <a href="#weather">气温参考</a>
+        <a href="#calendar">种植月历</a>
+        <a class="nav-contact" href="#contact">联系指导</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="./assets/ppt/hero-field.webp" alt="D152羊肚菌棚内规模化出菇与采收现场">
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <div class="hero-copy reveal">
+          <div class="eyebrow light"><span></span>专注蚌埠及皖北地区</div>
+          <div class="public-badge"><i aria-hidden="true"></i>公开技术服务网站 · 任何人可访问</div>
+          <h1 id="hero-title">围绕两支主推菌种，<br><em>把皖北羊肚菌种明白</em></h1>
+          <p>以D152和1201为主线，聚焦冷棚、棉被棚两种模式。把菌种选择、播种窗口、营养袋、催菇水及温光气湿管理，整理成可查看、可记录、可执行的生产参考。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#strain">查看两支菌种</a>
+            <a class="button ghost" href="tel:18155204187">咨询杨俊老师</a>
+          </div>
+          <div class="region-list" aria-label="重点服务区域">
+            <span>蚌埠</span><span>淮北</span><span>宿州</span><span>亳州</span><span>阜阳</span>
+          </div>
+        </div>
+
+        <aside class="quick-card reveal delay-1" aria-labelledby="quick-title">
+          <div class="quick-heading">
+            <span class="quick-number">01</span>
+            <div><p>先确认设施条件</p><h2 id="quick-title">您的棚更接近哪一种？</h2></div>
+          </div>
+          <div class="quick-tabs" role="tablist" aria-label="棚型快速选择">
+            <button class="quick-tab active" type="button" role="tab" aria-selected="true" data-mode="cold">冷棚</button>
+            <button class="quick-tab" type="button" role="tab" aria-selected="false" data-mode="warm">棉被棚 / 暖棚</button>
+          </div>
+          <div class="quick-result" id="quick-result" aria-live="polite">
+            <div class="result-label">适合</div>
+            <strong id="quick-suit">投入控制优先、能紧跟天气巡棚的主体</strong>
+            <div class="result-grid">
+              <div><span>投入</span><b id="quick-cost">相对较低</b></div>
+              <div><span>管理重点</span><b id="quick-focus">播期与天气窗口</b></div>
+            </div>
+            <p id="quick-note">重点防范寒潮、高温、积水及春季升温过快。</p>
+          </div>
+          <a class="text-link" href="#mode">查看完整技术路线 <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+      <p class="image-note">图片来自服务器培训课件：D152棚内采收现场</p>
+    </section>
+
+    <section class="intro-strip" aria-label="平台重点">
+      <div class="wrap intro-grid">
+        <div><b>2</b><span>支主推菌种<br>D152与1201</span></div>
+        <div><b>2</b><span>种设施路线<br>冷棚与棉被棚</span></div>
+        <div><b>5</b><span>个完整越冬季<br>蚌埠气温示例</span></div>
+        <p>先看菌种适配，再看棚型能力，最后把操作落到“地温、墒情、天气预报和棚内实测”四项记录上。</p>
+      </div>
+    </section>
+
+    <section class="section strain-section" id="strain" aria-labelledby="strain-title">
+      <div class="wrap">
+        <div class="section-head split-head reveal">
+          <div><div class="eyebrow"><span></span>主推菌种</div><h2 id="strain-title">D152与1201，不用一套办法硬管</h2></div>
+          <p>以下特性按服务器课件整理。网站统一使用课件型号“D152、1201”；选种时仍需同时核对菌种批次、活力、纯度和皖北本地小区试验结果。</p>
+        </div>
+
+        <div class="strain-grid">
+          <article class="strain-card d152-card reveal">
+            <a class="strain-media" href="./assets/ppt/d152-close.webp" target="_blank" aria-label="查看D152商品菇大图">
+              <img src="./assets/ppt/d152-close.webp" alt="D152成熟羊肚菌商品菇近景" loading="lazy"><span>点击查看大图</span>
+            </a>
+            <div class="strain-body">
+              <div class="strain-topline"><span class="strain-code">D152</span><span class="strain-label">课件标注：菌胜六妹</span></div>
+              <h3>早熟、出菇早，重在控水与避重茬</h3>
+              <p>课件将D152定位为早熟型，突出出菇早、菇型好；北方棉被棚与冷棚均有应用案例。</p>
+              <ul class="trait-list">
+                <li><b>管理优势：</b>出菇进程靠前，商品菇外形较整齐。</li>
+                <li><b>重点短板：</b>课件明确提示“不抗重茬、不耐大水”。</li>
+                <li><b>皖北要点：</b>优先新茬或轮作地，催菇水必须看成熟度，避免一次性过量。</li>
+              </ul>
+              <div class="risk-note"><b>红线提醒</b><span>不把“早熟”理解为提前大水；水量服从土质、底墒和下渗能力。</span></div>
+            </div>
+          </article>
+
+          <article class="strain-card strain-1201-card reveal delay-1">
+            <a class="strain-media" href="./assets/ppt/strain-1201-field.webp" target="_blank" aria-label="查看1201棚内表现大图">
+              <img src="./assets/ppt/strain-1201-field.webp" alt="1201羊肚菌在棚内成片出菇现场" loading="lazy"><span>点击查看大图</span>
+            </a>
+            <div class="strain-body">
+              <div class="strain-topline"><span class="strain-code">1201</span><span class="strain-label">课件标注：菌胜七妹</span></div>
+              <h3>设施适应面较宽，突出温度与重茬适应性</h3>
+              <p>课件给出的生长周期参考为95—115天，鲜菇褐青色、烘干后黑色，温度抗性和重茬适应性为其重点。</p>
+              <ul class="trait-list">
+                <li><b>设施适配：</b>冬暖式棚、棉被拱棚、冷棚等均列入课件适用范围。</li>
+                <li><b>生产节奏：</b>可用于早菇、正季及重茬路线，但仍需验证地块病原基数。</li>
+                <li><b>皖北要点：</b>有重茬历史的棚要先做土壤与病虫风险评估，不能只靠品种抗性兜底。</li>
+              </ul>
+              <div class="risk-note green"><b>应用提醒</b><span>“抗重茬”不等于无需轮作、消毒和病虫预防，管理基础仍不能省。</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="strain-compare reveal">
+          <div><span>优先选D152</span><p>新茬地、希望出菇靠前，并且能把催菇水和棚内水分管细。</p></div>
+          <div><span>优先评估1201</span><p>棚型多样、温度波动较大，或存在重茬历史但已经完成系统性风险治理。</p></div>
+          <div><span>共同底线</span><p>先做小区试验；同批菌种留样；记录播种、营养袋、催菇和首菇日期。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-section" id="team" aria-labelledby="team-title">
+      <div class="wrap">
+        <div class="section-head split-head team-head reveal">
+          <div><div class="eyebrow"><span></span>团队实践与自主创新</div><h2 id="team-title">菌种自己做，关键环节自己把关</h2></div>
+          <p>从菌种制作、灭菌培养到棚体通风控制，团队把实验室质量管理和生产现场需求接在一起。以下图片均来自杨俊团队的真实工作记录。</p>
+        </div>
+
+        <article class="practice-story lab-story reveal" aria-labelledby="lab-story-title">
+          <div class="practice-copy">
+            <span class="practice-number">01 · 菌种制作</span>
+            <h3 id="lab-story-title">课题组全程参与制作与质量把关</h3>
+            <p>围绕D152、1201等生产用菌种，团队直接参与拌料装袋、高压灭菌、接种后培养与批次检查，尽量把污染风险拦在进棚之前。</p>
+            <div class="practice-facts" aria-label="菌种制作关键参数">
+              <div><strong>126℃</strong><span>高压灭菌2小时</span></div>
+              <div><strong>约5亩</strong><span>单批灭菌能力<br>（课件记录）</span></div>
+            </div>
+            <ul class="practice-points">
+              <li>原料拌匀、装袋规格和含水量统一记录。</li>
+              <li>灭菌后转入洁净培养室，配合通风与空调控温。</li>
+              <li>杨俊与安徽农业大学龚赛老师共同参与质量把关。</li>
+            </ul>
+          </div>
+          <div class="lab-photo-grid" aria-label="菌种制作现场照片">
+            <figure class="lab-photo lab-photo-main"><a href="./assets/lab/strain-prep.jpeg" target="_blank"><img src="./assets/lab/strain-prep.jpeg" alt="杨俊团队在生产现场进行菌种原料拌料和装袋" loading="lazy"></a><figcaption>拌料装袋 · 团队生产现场</figcaption></figure>
+            <figure class="lab-photo"><a href="./assets/lab/pressure-sterilizer.jpg" target="_blank"><img src="./assets/lab/pressure-sterilizer.jpg" alt="团队使用的高压灭菌设备" loading="lazy"></a><figcaption>高压灭菌</figcaption></figure>
+            <figure class="lab-photo"><a href="./assets/lab/sterilized-bottles.jpg" target="_blank"><img src="./assets/lab/sterilized-bottles.jpg" alt="完成灭菌后的菌种培养容器" loading="lazy"></a><figcaption>灭菌后批次</figcaption></figure>
+            <figure class="lab-photo"><a href="./assets/lab/culture-room.jpeg" target="_blank"><img src="./assets/lab/culture-room.jpeg" alt="洁净培养室内整齐摆放的菌种培养架" loading="lazy"></a><figcaption>洁净培养室</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="practice-story automation-story reveal" aria-labelledby="automation-title">
+          <div class="automation-visuals" aria-label="自动卷膜系统实拍">
+            <figure class="automation-install"><a href="./assets/automation/roll-film-installation.jpg" target="_blank"><img src="./assets/automation/roll-film-installation.jpg" alt="杨俊团队在大棚现场安装调试自动卷膜系统" loading="lazy"></a><figcaption>大棚现场安装与调试</figcaption></figure>
+            <figure class="automation-control"><a href="./assets/automation/roll-film-control.jpeg" target="_blank"><img src="./assets/automation/roll-film-control.jpeg" alt="自动卷膜系统的手机端多棚控制界面" loading="lazy"></a><figcaption>手机端分棚控制界面</figcaption></figure>
+          </div>
+          <div class="practice-copy automation-copy">
+            <span class="practice-number">02 · 自主开发</span>
+            <h3 id="automation-title">自动卷膜系统，让通风响应更及时</h3>
+            <p>这是杨俊团队根据羊肚菌棚管理需求自主开发的自动卷膜（卷帘）系统，可在手机端对多个棚分别控制升降，阴晴变化时能更快调整棚内通风。</p>
+            <div class="automation-highlight"><strong>1人 × 约10棚</strong><span>课件记录的管理能力参考；实际数量取决于棚距、网络、电机和现场安全条件。</span></div>
+            <ul class="practice-points">
+              <li>手机端分棚控制，减少往返逐棚操作。</li>
+              <li>根据阴晴、温度与氧气状况及时开关风口。</li>
+              <li>自动控制不替代巡棚；断电、断网和极端天气仍需人工预案。</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="team-heading reveal">
+          <div><span>研发与生产团队</span><h3>博士、教授与一线生产人员协同</h3></div>
+          <p>团队覆盖菌种研发、资源收集、育种生产、副产品开发和现场执行。</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="member-card lead-member reveal">
+            <img src="./assets/team/yang-jun.jpeg" alt="杨俊老师" loading="lazy">
+            <div><span>负责人 · 菌种研发</span><h4>杨俊</h4><p>安徽农业大学博士，蚌埠学院食品与生物工程学院教师；专注以羊肚菌为代表的高值食用菌育种。</p></div>
+          </article>
+          <article class="member-card reveal delay-1">
+            <img src="./assets/team/zhang-bin.jpeg" alt="张斌教授" loading="lazy">
+            <div><span>团队引领 · 副产品开发</span><h4>张斌 教授</h4><p>蚌埠学院食品与生物工程学院教师，十佳农业科技特派员。</p></div>
+          </article>
+          <article class="member-card reveal">
+            <img src="./assets/team/gong-sai.jpeg" alt="龚赛博士" loading="lazy">
+            <div><span>资源收集 · 菌种把关</span><h4>龚赛 博士</h4><p>安徽农业大学教师，负责食用菌资源收集，并参与菌种质量把关。</p></div>
+          </article>
+          <article class="member-card reveal delay-1">
+            <img src="./assets/team/ling-chengcheng.jpg" alt="凌程程博士" loading="lazy">
+            <div><span>菌种生产 · 育种</span><h4>凌程程 博士</h4><p>蚌埠学院食品与生物工程学院教师，负责菌种生产及育种。</p></div>
+          </article>
+          <article class="member-card reveal">
+            <img src="./assets/team/zhang-yesheng.jpeg" alt="张业胜先生" loading="lazy">
+            <div><span>企业协同</span><h4>张业胜</h4><p>菌胜生物科技有限责任公司创始人、CEO。</p></div>
+          </article>
+          <article class="member-card reveal delay-1">
+            <img src="./assets/team/yuan-hang.jpeg" alt="袁航" loading="lazy">
+            <div><span>菌种生产</span><h4>袁航</h4><p>蚌埠学院食品科学与工程专业本科生，菌种生产员。</p></div>
+          </article>
+        </div>
+        <p class="team-source reveal">图片与人员信息整理自《安徽蚌埠羊肚菌汇报—报告（杨俊，2026.03.22）》；职责表述按课件内容整理。</p>
+      </div>
+    </section>
+
+    <section class="section mode-section" id="mode" aria-labelledby="mode-title">
+      <div class="wrap">
+        <div class="section-head split-head reveal">
+          <div><div class="eyebrow"><span></span>皖北设施路线</div><h2 id="mode-title">冷棚顺天时，棉被棚主动控节奏</h2></div>
+          <p>冷棚的根本特点是没有保温被、夜间保温能力有限；棉被棚的优势是可通过保温被、光照和风口主动调节，但管理要求更细。</p>
+        </div>
+
+        <div class="mode-visual-grid reveal">
+          <figure class="mode-photo-card"><img src="./assets/ppt/cold-structure.webp" alt="冷棚内部的床面、营养袋和喷灌设施" loading="lazy"><figcaption><b>冷棚：</b>成本较低、建拆灵活，最关键的是播种窗口、催菇水窗口和极端天气预案。</figcaption></figure>
+          <figure class="mode-photo-card"><img src="./assets/ppt/cotton-shed.webp" alt="棉被大拱棚外部结构" loading="lazy"><figcaption><b>棉被棚：</b>通过升降保温被、顶风口和侧风口协调温度、光照、湿度与换气。</figcaption></figure>
+        </div>
+
+        <div class="mode-switch reveal" role="tablist" aria-label="查看棚型">
+          <button class="mode-button active" type="button" role="tab" aria-selected="true" data-mode="cold"><span class="mode-icon" aria-hidden="true">冷</span><span><b>冷棚模式</b><small>顺应自然温度趋势</small></span></button>
+          <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="warm"><span class="mode-icon" aria-hidden="true">棉</span><span><b>棉被棚 / 暖棚</b><small>主动控温、控光、控气</small></span></button>
+        </div>
+
+        <div class="mode-panel reveal" id="mode-panel" tabindex="0">
+          <div class="mode-summary">
+            <span class="pill" id="mode-tag">冷棚模式</span><h3 id="mode-heading">播种窗口和催菇窗口决定全年节奏</h3>
+            <p id="mode-description">设施缓冲能力有限，必须让播种后的发菌阶段顺着降温趋势推进，并在催菇前同时核对菌丝成熟、床面原基和未来天气。</p>
+            <div class="mode-advice" id="mode-advice">皖北不能照搬外地固定日期：以5厘米地温、未来7—10天天气和棚内实测共同决策。</div>
+          </div>
+          <dl class="mode-metrics"><div><dt>建设投入</dt><dd id="metric-invest">较低</dd></div><div><dt>环境可控性</dt><dd id="metric-control">一般</dd></div><div><dt>日常管理</dt><dd id="metric-manage">看天气、勤巡棚</dd></div><div><dt>主要风险</dt><dd id="metric-risk">寒潮、高温、大风雪</dd></div></dl>
+          <div class="mode-checks"><h4>开种前先确认</h4><ul id="mode-checklist"><li>地块排水是否顺畅，连续阴雨后是否积水</li><li>顶风口、侧风口和遮阳材料能否快速调整</li><li>寒潮、大风和降雪到来前是否有加固保温方案</li></ul></div>
+        </div>
+
+        <div class="comparison-wrap reveal">
+          <table class="comparison-table">
+            <caption>两种棚型的管理差异</caption><thead><tr><th scope="col">比较项目</th><th scope="col">冷棚</th><th scope="col">棉被棚 / 暖棚</th></tr></thead>
+            <tbody><tr><th scope="row">核心逻辑</th><td>顺天时，提前看天气</td><td>主动调节，四项一起管</td></tr><tr><th scope="row">播种阶段</th><td>窗口期窄，避免过早或过晚</td><td>可用光照与保温帮助发菌，但仍要防高温</td></tr><tr><th scope="row">出菇阶段</th><td>逐步加大通风，防扫地风</td><td>见光不超温，通风不骤降湿</td></tr><tr><th scope="row">极端天气</th><td>高低温、大风、大雪承压弱</td><td>可缓冲，但依赖风口、棉被与安全加温预案</td></tr><tr><th scope="row">典型误区</th><td>只保湿、不通风；固定日期催菇</td><td>长期闷棚；把保温误解为持续升温</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tech-section" id="tech" aria-labelledby="tech-title">
+      <div class="wrap">
+        <div class="section-head split-head reveal">
+          <div><div class="eyebrow"><span></span>关键栽培技术</div><h2 id="tech-title">七道关，环环相扣</h2></div>
+          <p>菌种是核心、营养是基础、管理是保障。任何一个数字都不能脱离土质、棚型和生育阶段单独使用。</p>
+        </div>
+
+        <ol class="tech-map">
+          <li class="tech-card reveal"><span>01</span><h3>基地与土壤</h3><p>优先壤土或沙壤土，地势平整稍高、排水通畅；重茬地、长期撂荒地和污染水源慎用。</p><b>先排水，再谈保湿</b></li>
+          <li class="tech-card reveal"><span>02</span><h3>菌种与批次</h3><p>围绕D152、1201核对企业资质、菌种活力和纯度；同批留样并记录到棚。</p><b>品种好，也要批次稳</b></li>
+          <li class="tech-card reveal"><span>03</span><h3>播种窗口</h3><p>以5厘米地温稳定降至约16℃或以下为重要判断，结合未来天气在“暖尾冷头”安排。</p><b>看地温，不只看日历</b></li>
+          <li class="tech-card reveal"><span>04</span><h3>营养袋吸收</h3><p>播种后1—2周放置较合适，最晚一般不超过20天；划口贴地、摆放均匀。</p><b>有效吃料才有后劲</b></li>
+          <li class="tech-card reveal"><span>05</span><h3>催菇水判断</h3><p>营养袋明显变轻、菌霜褪去、原基稳定拔尖，再叠加一周以上相对稳定天气。</p><b>抓冷尾暖头，忌盲目早浇</b></li>
+          <li class="tech-card reveal"><span>06</span><h3>温光气湿协同</h3><p>原基期保湿，幼菇后逐步降湿、增氧；高温高湿和地面扫风都要避免。</p><b>见光不超温，通风不骤变</b></li>
+          <li class="tech-card reveal"><span>07</span><h3>极端天气与采收</h3><p>寒潮前保温、暖日先通风、大雪前加固；成熟及时采收，规范烘干并低温保存。</p><b>预案要做在天气到来前</b></li>
+        </ol>
+
+        <div class="soil-treatment reveal" aria-labelledby="soil-title">
+          <div class="soil-heading">
+            <div><span class="soil-kicker">播种前 · 按1亩计算</span><h3 id="soil-title">土壤处理怎么用、用多少</h3></div>
+            <p>先清茬、排水、测pH与EC，再定处理方案。辛硫磷用于地下害虫风险治理；生石灰或草木灰用于土壤处理时必须二选一，不能三样直接混在一起撒。</p>
+          </div>
+          <div class="soil-dose-grid">
+            <article class="dose-card primary-dose">
+              <span class="dose-step">01 · 地下害虫</span>
+              <h4>3%辛硫磷颗粒剂</h4>
+              <strong>15—20 <small>kg/亩</small></strong>
+              <p>服务器培训课件参考量：旋耕前均匀撒施，再混入土层；旋耕深度不少于15厘米。只在所购产品标签允许、当地植保人员确认后使用。</p>
+            </article>
+            <article class="dose-card warning-dose">
+              <span class="dose-step">02 · “辛60”先核标签</span>
+              <h4>乳油或60%制剂</h4>
+              <strong>不可直接套量</strong>
+              <p>课件另记“辛硫磷乳油2 kg/亩随水”，但没有标明乳油浓度，故不作为通用处方。若“辛60”指60%制剂，绝不能照搬3%颗粒剂15—20 kg/亩；请按瓶身登记作物、靶标和标签用量核算。</p>
+            </article>
+            <article class="dose-card">
+              <span class="dose-step">03 · 调酸与土壤处理</span>
+              <h4>生石灰或干草木灰</h4>
+              <strong>二选一</strong>
+              <div class="choice-dose"><b>生石灰</b><span>100—150 kg/亩</span><b>干草木灰</b><span>25—30 kg/亩</span></div>
+              <p>数字引自DB33/T 1378—2024，属于外地标准参考。皖北必须结合本地土样复核，不能把两者叠加使用。</p>
+            </article>
+          </div>
+          <div class="soil-decision">
+            <div><b>pH＜6.5</b><span>可把上述“石灰或草木灰”范围作为小区试验上限参考，处理后复测。</span></div>
+            <div><b>pH 6.5—7.5</b><span>通常不为“调碱”而全田撒施；确需土壤处理时先做一小区验证。</span></div>
+            <div><b>pH＞7.5或EC偏高</b><span>不建议再全田施石灰、草木灰，重点改做排水、轮作和其他风险治理。</span></div>
+          </div>
+          <div class="safety-band"><b>安全红线</b><p>辛硫磷不得与石灰、草木灰等碱性材料自行混配；分开操作，间隔与防护按产品标签及当地农技、植保指导执行。播种后尤其是出菇期，不使用未登记或来源不明的农药。</p></div>
+          <p class="soil-source">用量依据：服务器棉被棚培训课件（土壤整治页）及浙江省地方标准DB33/T 1378—2024《羊肚菌大田设施栽培技术规程》。后者仅作皖北小区试验参考。</p>
+        </div>
+
+        <div class="parameter-card reveal">
+          <div class="parameter-heading"><span>课件参数速查</span><h3>把数字放回对应阶段</h3><p>以下仅作制定巡棚阈值的参考，现场以棚内传感器和长势为准。</p></div>
+          <div class="parameter-table-wrap"><table class="parameter-table"><thead><tr><th>环节</th><th>课件参考</th><th>现场判断</th><th>需要避免</th></tr></thead><tbody>
+            <tr><th>选地</th><td>土壤pH 5.5—8.5；EC（1:5）宜低于0.8 dS/m</td><td>排水、土质、前茬和水源同时合格</td><td>烂泥田、硬底田、污染水</td></tr>
+            <tr><th>整地播种</th><td>旋耕深度15厘米以上；大土块不超过3厘米</td><td>覆土严密、不露菌种，播后观察萌发</td><td>只追求低温而过度推迟播期</td></tr>
+            <tr><th>营养袋发菌</th><td>8—16℃可发菌，12—16℃吃料较好</td><td>正常温度下一周仍不吃料要排查</td><td>放袋后再大水补墒</td></tr>
+            <tr><th>催菇水</th><td>20厘米土层湿透；黏土宜少量多次</td><td>木棍可轻松下插，表面无长期明水</td><td>D152大水、低洼积水、过早操作</td></tr>
+            <tr><th>出菇温湿</th><td>低温养菇常用12—18℃；前期湿度90%—95%，3厘米后降至85%—90%</td><td>原基、幼菇和成菇分阶段微调</td><td>高温高湿、忽干忽湿</td></tr>
+            <tr><th>通风</th><td>侧风口宜高于地面80厘米；幼菇后逐步加大</td><td>结合CO₂、菇柄长度和湿度判断</td><td>原基期直吹地面的“扫地风”</td></tr>
+          </tbody></table></div>
+        </div>
+
+        <div class="tech-gallery" aria-label="课件技术现场图">
+          <a class="tech-photo wide reveal" href="./assets/ppt/cold-nutrition-rows.webp" target="_blank"><img src="./assets/ppt/cold-nutrition-rows.webp" alt="冷棚床面营养袋与羊肚菌整齐出菇现场" loading="lazy"><span><small>营养袋与床面</small><b>摆放均匀、贴地吸收，后续管理才有基础</b></span></a>
+          <a class="tech-photo reveal" href="./assets/ppt/high-vent.webp" target="_blank"><img src="./assets/ppt/high-vent.webp" alt="棉被棚高位侧风口结构" loading="lazy"><span><small>风口设计</small><b>风口位置抬高，减少地面直吹</b></span></a>
+          <a class="tech-photo reveal" href="./assets/ppt/production-bed.webp" target="_blank"><img src="./assets/ppt/production-bed.webp" alt="规模化棚内床面与通道布局" loading="lazy"><span><small>规模化巡棚</small><b>通道清晰，便于分区记录与及时采收</b></span></a>
+          <a class="tech-photo reveal" href="./assets/ppt/harvest-detail.webp" target="_blank"><img src="./assets/ppt/harvest-detail.webp" alt="成熟羊肚菌菇型与菌柄细节" loading="lazy"><span><small>商品性观察</small><b>菇型、菌柄和成熟度同时看</b></span></a>
+        </div>
+        <p class="photo-source-note reveal">技术文字与图片整理自服务器yangdujun文件夹中的北方高质量出菇、冷棚、棉被棚和菌种介绍培训课件；用于教学与技术示意。</p>
+      </div>
+    </section>
+
+    <section class="section disease-section" id="disease" aria-labelledby="disease-title">
+      <div class="wrap">
+        <div class="section-head split-head reveal">
+          <div><div class="eyebrow amber"><span></span>病虫害图谱</div><h2 id="disease-title">四病四虫，先看图再判断</h2></div>
+          <p>图片取自服务器北方羊肚菌培训课件，用于田间初筛，不代替实验室鉴定。发现异常先标记病健交界、停止带土走动，并同步记录温湿度、地温和最近三天操作。</p>
+        </div>
+
+        <div class="disease-group-label reveal"><span>常见病害</span><p>高温、高湿、积水和通风死角往往会放大风险</p></div>
+        <div class="disease-grid">
+          <article class="disease-card reveal">
+            <a href="./assets/disease/disease-white-mold.webp" target="_blank" aria-label="查看白霉病课件大图"><img src="./assets/disease/disease-white-mold.webp" alt="课件中的羊肚菌白霉病症状照片" loading="lazy"><span>病害 01</span></a>
+            <div><h3>白霉病</h3><p>床面或菇体出现白色霉层并扩展。先查高温高湿、积水和通风死角，立即分区标记。</p></div>
+          </article>
+          <article class="disease-card reveal delay-1">
+            <a href="./assets/disease/disease-red-foot.webp" target="_blank" aria-label="查看红脚病课件大图"><img src="./assets/disease/disease-red-foot.webp" alt="课件中的羊肚菌红脚病症状照片" loading="lazy"><span>病害 02</span></a>
+            <div><h3>红脚病</h3><p>菌柄基部出现红褐色异常、长势转弱。记录水分和温度变化，沿病健交界隔离观察。</p></div>
+          </article>
+          <article class="disease-card reveal">
+            <a href="./assets/disease/disease-cobweb.webp" target="_blank" aria-label="查看蛛网病课件大图"><img src="./assets/disease/disease-cobweb.webp" alt="课件中的羊肚菌蛛网病症状照片" loading="lazy"><span>病害 03</span></a>
+            <div><h3>蛛网病</h3><p>蛛网状菌丝在床面或菇体间蔓延。减少人员与工具跨区，避免带病残体和土粒扩散。</p></div>
+          </article>
+          <article class="disease-card reveal delay-1">
+            <a href="./assets/disease/disease-black-foot.webp" target="_blank" aria-label="查看黑脚病课件大图"><img src="./assets/disease/disease-black-foot.webp" alt="课件中的羊肚菌黑脚病症状照片" loading="lazy"><span>病害 04</span></a>
+            <div><h3>黑脚病</h3><p>菌柄基部变黑、萎缩或软弱。重点排查低洼积水、长时间高湿以及换气不足。</p></div>
+          </article>
+        </div>
+
+        <div class="disease-group-label pest-label reveal"><span>常见虫害</span><p>清洁田园、物理监测和播前治理优先</p></div>
+        <div class="disease-grid pest-grid">
+          <article class="disease-card reveal">
+            <a href="./assets/disease/pest-springtail.webp" target="_blank" aria-label="查看跳虫课件大图"><img src="./assets/disease/pest-springtail.webp" alt="课件中的羊肚菌跳虫照片" loading="lazy"><span>虫害 01</span></a>
+            <div><h3>跳虫</h3><p>床面可见细小虫体，受惊会跳动，常聚集在潮湿区域。先做粘捕和局部数量记录。</p></div>
+          </article>
+          <article class="disease-card reveal delay-1">
+            <a href="./assets/disease/pest-slug.webp" target="_blank" aria-label="查看蛞蝓课件大图"><img src="./assets/disease/pest-slug.webp" alt="课件中的羊肚菌蛞蝓照片" loading="lazy"><span>虫害 02</span></a>
+            <div><h3>蛞蝓</h3><p>菇体有啃食缺口，床面或通道留有黏液痕。夜间巡查低洼潮湿处，并清理藏匿物。</p></div>
+          </article>
+          <article class="disease-card reveal">
+            <a href="./assets/disease/pest-nematode.webp" target="_blank" aria-label="查看线虫课件大图"><img src="./assets/disease/pest-nematode.webp" alt="课件中的线虫显微示例照片" loading="lazy"><span>虫害 03</span></a>
+            <div><h3>线虫</h3><p>肉眼不能仅凭一张床面照片确诊；出现成片衰弱、腐烂时，应取病健交界样品送检。</p></div>
+          </article>
+          <article class="disease-card reveal delay-1">
+            <a href="./assets/disease/pest-gnat.webp" target="_blank" aria-label="查看菇蚊课件大图"><img src="./assets/disease/pest-gnat.webp" alt="课件中的羊肚菌菇蚊照片" loading="lazy"><span>虫害 04</span></a>
+            <div><h3>菇蚊</h3><p>潮湿有机物附近可见小型成虫或幼虫。用粘虫板监测趋势，同时清理残菇和污染物。</p></div>
+          </article>
+        </div>
+
+        <div class="disease-actions reveal">
+          <div><span>01</span><b>播前降基数</b><p>优先轮作、高温闷棚、清洁田园和经确认的土壤处理。</p></div>
+          <div><span>02</span><b>出菇稳环境</b><p>温、光、气、湿协同，避免高温高湿和床面长时间明水。</p></div>
+          <div><span>03</span><b>异常先隔离</b><p>拍全棚、病健交界和近景；工具分区，不把病土带向健康区。</p></div>
+          <div><span>04</span><b>确诊再用药</b><p>食用菌出菇期尤其谨慎，只按登记标签和当地植保指导处理。</p></div>
+        </div>
+        <p class="disease-source reveal">图片来源：服务器yangdujun文件夹《北方羊肚菌高质量出菇技术体系》课件病虫害页；点击图片可查看大图。</p>
+      </div>
+    </section>
+
+    <section class="section weather-section" id="weather" aria-labelledby="weather-title">
+      <div class="wrap">
+        <div class="section-head weather-head reveal">
+          <div><div class="eyebrow amber"><span></span>蚌埠气温参考</div><h2 id="weather-title">近五个完整越冬季：10月—次年3月</h2><p>以蚌埠气象站（WMO 58221）日值为基础，汇总2020/21—2024/25五个完整种植季。站外气温用于判断大趋势，棚内仍需独立布设温湿度记录。</p></div>
+          <a class="source-link" href="https://meteostat.net/en/station/58221" target="_blank" rel="noreferrer">数据源：Meteostat 58221 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="weather-alerts reveal"><article><span>五季极端最低</span><strong>−11.5<sup>°C</sup></strong><p>出现在2020/21季1月，寒潮前需提前检查保温、棚膜与加固。</p></article><article><span>低温最集中</span><strong>12—1<sup>月</sup></strong><p>两个月是越冬养菌、防冻与水分稳定的核心阶段。</p></article><article><span>升温波动重点</span><strong>3<sup>月</sup></strong><p>历史日最高达到32.0°C，晴天棚内升温通常更快。</p></article></div>
+        <div class="chart-card reveal"><div class="chart-topline"><div><h3>各越冬季月平均气温走势</h3><p>单位：°C；点击图例可显示或隐藏某一季</p></div><div class="chart-legend" id="chart-legend" aria-label="图表图例"></div></div><div class="chart-shell" id="temperature-chart" role="img" aria-label="蚌埠近五个越冬季10月至次年3月月平均气温折线图"></div><div class="chart-insight"><b>管理提示</b><p>10—11月重点看播种窗口；12月—次年1月防寒并保持发菌环境稳定；2月评估催菇条件；3月重点防棚内骤热。</p></div></div>
+        <div class="weather-detail-grid">
+          <div class="season-card reveal"><div class="card-title-row"><div><span class="card-kicker">单季明细</span><h3>选择一个越冬季</h3></div><label class="select-wrap"><span class="sr-only">选择越冬季</span><select id="season-select"><option value="2024-25">2024/25</option><option value="2023-24">2023/24</option><option value="2022-23">2022/23</option><option value="2021-22">2021/22</option><option value="2020-21">2020/21</option></select></label></div><div class="season-table-wrap"><table class="season-table"><thead><tr><th>月份</th><th>月均温</th><th>平均低温</th><th>极端低温</th><th>低于0°C天数</th></tr></thead><tbody id="season-table-body"></tbody></table></div><p class="table-note">“低于0°C天数”按当日日最低气温统计；站外气温不等于棚内温度。</p></div>
+          <div class="management-card reveal delay-1"><span class="card-kicker">气温 → 管理</span><h3>五个关键判断</h3><ol><li><b>10月：</b>完成基地、土壤、水源和棚体评估。</li><li><b>11月：</b>看5厘米地温与未来降温趋势安排播种。</li><li><b>12—1月：</b>稳发菌、防寒潮，也避免长期闷棚。</li><li><b>2月：</b>菌丝成熟度与天气同时满足再浇催菇水。</li><li><b>3月：</b>晴天先防快速升温，幼菇后逐步降湿增氧。</li></ol></div>
+        </div>
+        <div class="climate-summary reveal"><div class="summary-title"><span class="card-kicker">五季汇总</span><h3>月度平均与极值</h3></div><div class="summary-table-wrap"><table class="summary-table"><thead><tr><th>月份</th><th>五季月均温</th><th>平均最低温</th><th>平均最高温</th><th>五季极端最低</th><th>管理关键词</th></tr></thead><tbody><tr><th>10月</th><td>17.2°C</td><td>12.0°C</td><td>23.5°C</td><td>2.8°C</td><td><span>选地 · 整棚</span></td></tr><tr><th>11月</th><td>11.6°C</td><td>6.5°C</td><td>17.8°C</td><td>−3.6°C</td><td><span>播种 · 看地温</span></td></tr><tr><th>12月</th><td>3.6°C</td><td>−2.3°C</td><td>9.8°C</td><td>−11.2°C</td><td><span>发菌 · 防寒潮</span></td></tr><tr><th>1月</th><td>3.4°C</td><td>−2.1°C</td><td>9.5°C</td><td>−11.5°C</td><td><span>成熟度观察</span></td></tr><tr><th>2月</th><td>5.5°C</td><td>0.5°C</td><td>10.8°C</td><td>−9.0°C</td><td><span>催菇前评估</span></td></tr><tr><th>3月</th><td>11.9°C</td><td>6.2°C</td><td>17.8°C</td><td>−1.5°C</td><td><span>通风 · 采收</span></td></tr></tbody></table></div></div>
+        <div class="data-note reveal"><strong>数据说明</strong><p>采用Meteostat蚌埠站58221逐日数据（2020-10-01至2025-03-31），由本站按月和越冬季汇总。仅用于历史趋势示例；当季操作必须结合短期预报、棚内温湿度、地温与作物状态。</p></div>
+      </div>
+    </section>
+
+    <section class="section calendar-section" id="calendar" aria-labelledby="calendar-title">
+      <div class="wrap">
+        <div class="section-head split-head reveal"><div><div class="eyebrow"><span></span>皖北种植月历</div><h2 id="calendar-title">把D152和1201的管理落到每个月</h2></div><p>这是蚌埠及皖北常见越冬节奏示例，不是固定播期表。冷棚尤其要服从当年温度趋势，棉被棚也不能脱离地温和菌丝成熟度。</p></div>
+        <div class="calendar-tabs reveal" role="tablist" aria-label="选择月份"><button class="calendar-tab active" type="button" role="tab" aria-selected="true" data-month="oct"><span>10月</span><small>基地准备</small></button><button class="calendar-tab" type="button" role="tab" aria-selected="false" data-month="nov"><span>11月</span><small>播种放袋</small></button><button class="calendar-tab" type="button" role="tab" aria-selected="false" data-month="winter"><span>12—1月</span><small>发菌成熟</small></button><button class="calendar-tab" type="button" role="tab" aria-selected="false" data-month="feb"><span>2月</span><small>催菇评估</small></button><button class="calendar-tab" type="button" role="tab" aria-selected="false" data-month="mar"><span>3月</span><small>出菇采收</small></button></div>
+        <div class="calendar-panel reveal" role="tabpanel" aria-live="polite"><div class="calendar-main"><span class="month-badge" id="calendar-month">10月</span><h3 id="calendar-heading">完成地块与棚体准备</h3><p id="calendar-desc"></p></div><div class="calendar-columns"><div><h4>本月任务</h4><ul id="calendar-tasks"></ul></div><div><h4>重点观察</h4><ul id="calendar-watch"></ul></div><div class="risk-box"><h4>风险提醒</h4><p id="calendar-risk"></p></div></div></div>
+      </div>
+    </section>
+
+    <section class="section diagnosis-section" id="diagnosis" aria-labelledby="diagnosis-title">
+      <div class="wrap">
+        <div class="section-head split-head reveal"><div><div class="eyebrow"><span></span>现场快速排查</div><h2 id="diagnosis-title">先记录现象，再调整管理</h2></div><p>出现问题不要立即“大水、大药、大通风”。先拍全棚、床面和近景，记录温湿度、地温、用水和最近三天操作。</p></div>
+        <div class="diagnosis-layout">
+          <div class="diagnosis-list reveal">
+            <details open><summary><span>01</span><b>播种后萌发弱或不萌发</b><i aria-hidden="true"></i></summary><div><p><b>先查：</b>菌种活力、土壤含水量、地温、覆土是否过厚或露种。</p><p><b>处理：</b>先分区标记并找原因；放营养袋前补足必要水分，避免盲目全棚操作。</p></div></details>
+            <details><summary><span>02</span><b>营养袋一周仍不吃料</b><i aria-hidden="true"></i></summary><div><p><b>先查：</b>温度是否处于8—16℃、划口是否贴土、菌丝是否有污染。</p><p><b>处理：</b>核对袋温和床面状态；温度偏低可适度见光提温，超过18℃则加强上部通风。</p></div></details>
+            <details><summary><span>03</span><b>浇催菇水后迟迟不整齐出菇</b><i aria-hidden="true"></i></summary><div><p><b>先查：</b>浇水是否过早、营养袋是否充分吸收、菌霜是否褪去、未来天气是否稳定。</p><p><b>处理：</b>保持环境稳定并分区观察，不连续追加大水；D152尤其警惕水分过量。</p></div></details>
+            <details><summary><span>04</span><b>长腿、帽小或局部畸形</b><i aria-hidden="true"></i></summary><div><p><b>先查：</b>CO₂积累、顶风口是否有效、棚内光照是否长期不足。</p><p><b>处理：</b>从高位小幅增加换气，随菇体长大逐步加大；原基期避免扫地风。</p></div></details>
+            <details><summary><span>05</span><b>高湿、白霉或幼菇软弱</b><i aria-hidden="true"></i></summary><div><p><b>先查：</b>高温高湿、床面积水、通风死角和病健交界。</p><p><b>处理：</b>先隔离病区、降低环境波动，按现场情况开展专业病虫处置。</p></div></details>
+          </div>
+          <aside class="record-card reveal delay-1"><div class="record-icon">记</div><h3>一次有效咨询，请准备这些资料</h3><ul><li>菌种：D152或1201、批次与播种日期</li><li>棚型：冷棚或棉被棚、面积与风口结构</li><li>当天早中晚棚温、地温、湿度</li><li>最近三天浇水、通风、盖被或揭被记录</li><li>全棚、床面、营养袋、异常近景各1张</li></ul><a class="button dark" href="tel:18155204187">电话联系技术指导</a></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal"><div class="eyebrow amber"><span></span>皖北本地技术服务</div><h2 id="contact-title">从选种、定棚到出菇，<br>把每个关键节点说清楚</h2><p>可围绕D152、1201的菌种适配，冷棚与棉被棚方案、播种窗口、催菇判断和异常诊断开展交流。联系时请尽量携带完整生产记录。</p></div>
+        <div class="contact-card reveal delay-1"><span class="contact-label">技术联系人</span><h3>杨俊</h3><p>蚌埠学院食品学院</p><a class="phone" href="tel:18155204187"><span>181</span> 5520 4187</a><div class="contact-actions"><a class="button primary" href="tel:18155204187">立即拨打</a><button class="button copy-button" type="button" data-copy="18155204187">复制号码</button></div><p class="copy-status" id="copy-status" aria-live="polite"></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap"><div class="footer-grid"><div><strong>皖北羊肚菌种植技术服务平台</strong><p>专注D152、1201与皖北冷棚、棉被棚标准化管理。</p></div><div><span>快速入口</span><p><a href="#strain">主推菌种</a> · <a href="#team">团队创新</a> · <a href="#tech">关键技术</a> · <a href="#disease">病虫识别</a></p></div><div><span>公开访问</span><p>本站已设置为任何人可查看。</p></div></div><div class="footer-bottom"><p>技术参数为培训课件与历史气候示例，不能替代当季棚内实测和现场诊断。</p><p>联系人：杨俊 · 18155204187</p></div></div></footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
