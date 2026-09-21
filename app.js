@@ -120,6 +120,146 @@ const palette = {
   "2024-25": "#d8a4c8"
 };
 
+const costPresets = {
+  cold: {
+    label: "冷棚",
+    yield: 200,
+    price: 80,
+    spawnAmount: 400,
+    spawnPrice: 8,
+    land: 1000,
+    facility: 2600,
+    nutrition: 2600,
+    labor: 2200,
+    utilities: 700,
+    reserve: 1200
+  },
+  warm: {
+    label: "棉被棚 / 暖棚",
+    yield: 200,
+    price: 80,
+    spawnAmount: 400,
+    spawnPrice: 8,
+    land: 1000,
+    facility: 5200,
+    nutrition: 2600,
+    labor: 2800,
+    utilities: 1200,
+    reserve: 1500
+  }
+};
+
+const costFields = {
+  area: "cost-area",
+  yield: "cost-yield",
+  price: "cost-price",
+  spawnAmount: "cost-spawn-amount",
+  spawnPrice: "cost-spawn-price",
+  land: "cost-land",
+  facility: "cost-facility",
+  nutrition: "cost-nutrition",
+  labor: "cost-labor",
+  utilities: "cost-utilities",
+  reserve: "cost-reserve"
+};
+
+let activeCostMode = "cold";
+const wholeNumber = new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 0 });
+const oneDecimal = new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+function readCostNumber(key) {
+  const value = Number(document.getElementById(costFields[key]).value);
+  return Number.isFinite(value) && value >= 0 ? value : 0;
+}
+
+function formatMoney(value) {
+  return `¥${wholeNumber.format(Math.abs(Math.round(value)))}`;
+}
+
+function renderCostBreakdown(items, total) {
+  const bar = document.getElementById("cost-breakdown-bar");
+  const legend = document.getElementById("cost-breakdown-legend");
+  bar.replaceChildren();
+  legend.replaceChildren();
+  items.forEach((item) => {
+    if (item.value > 0 && total > 0) {
+      const segment = document.createElement("i");
+      segment.style.width = `${(item.value / total) * 100}%`;
+      segment.style.background = item.color;
+      segment.title = `${item.label}：${formatMoney(item.value)}/亩`;
+      bar.appendChild(segment);
+    }
+    const label = document.createElement("span");
+    const dot = document.createElement("i");
+    dot.style.background = item.color;
+    label.append(dot, document.createTextNode(`${item.label} ${formatMoney(item.value)}`));
+    legend.appendChild(label);
+  });
+}
+
+function updateCostCalculator() {
+  const area = readCostNumber("area");
+  const freshYield = readCostNumber("yield");
+  const salePrice = readCostNumber("price");
+  const spawnCost = readCostNumber("spawnAmount") * readCostNumber("spawnPrice");
+  const items = [
+    { label: "菌种", value: spawnCost, color: "#d6a24a" },
+    { label: "土地土壤", value: readCostNumber("land"), color: "#8fc7a5" },
+    { label: "棚体材料", value: readCostNumber("facility"), color: "#79a7d3" },
+    { label: "营养袋", value: readCostNumber("nutrition"), color: "#d8a4c8" },
+    { label: "人工", value: readCostNumber("labor"), color: "#dd8d64" },
+    { label: "水电耗材", value: readCostNumber("utilities"), color: "#a5b77a" },
+    { label: "防控预备", value: readCostNumber("reserve"), color: "#bd8875" }
+  ];
+  const perMu = items.reduce((sum, item) => sum + item.value, 0);
+  const total = perMu * area;
+  const revenue = freshYield * salePrice * area;
+  const profit = revenue - total;
+  const stressRevenue = freshYield * 0.7 * salePrice * 0.8 * area;
+  const stressProfit = stressRevenue - total;
+  const areaLabel = Number.isInteger(area) ? area.toFixed(0) : area.toFixed(1);
+
+  document.getElementById("cost-mode-label").textContent = `${costPresets[activeCostMode].label} · ${areaLabel}亩测算`;
+  document.getElementById("cost-spawn-subtotal").textContent = `${formatMoney(spawnCost)}/亩`;
+  document.getElementById("cost-per-mu").textContent = `${formatMoney(perMu)}/亩`;
+  document.getElementById("cost-total").textContent = formatMoney(total);
+  document.getElementById("cost-revenue").textContent = formatMoney(revenue);
+  document.getElementById("cost-profit").textContent = `${profit < 0 ? "−" : ""}${formatMoney(profit)}`;
+  document.getElementById("cost-profit-note").textContent = profit < 0 ? "当前参数下预计收入低于本季投入" : "预计销售收入减去本季投入";
+  document.querySelector(".result-primary").classList.toggle("loss", profit < 0);
+  document.getElementById("cost-break-even-yield").textContent = salePrice > 0 ? `${(perMu / salePrice).toFixed(1)} kg/亩` : "售价需大于0";
+  document.getElementById("cost-break-even-price").textContent = freshYield > 0 ? `¥${oneDecimal.format(perMu / freshYield)}/kg` : "产量需大于0";
+  document.getElementById("cost-stress-profit").textContent = `${stressProfit < 0 ? "亏损" : "结余"} ${formatMoney(stressProfit)}`;
+  document.getElementById("cost-stress-note").textContent = `压力情景收入 ${formatMoney(stressRevenue)}`;
+  renderCostBreakdown(items, perMu);
+}
+
+function applyCostPreset(mode, keepArea = true) {
+  activeCostMode = mode;
+  const preset = costPresets[mode];
+  document.querySelectorAll("[data-cost-mode]").forEach((button) => {
+    const active = button.dataset.costMode === mode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  Object.entries(preset).forEach(([key, value]) => {
+    if (key !== "label") document.getElementById(costFields[key]).value = value;
+  });
+  if (!keepArea) document.getElementById(costFields.area).value = 1;
+  updateCostCalculator();
+}
+
+function setupCostCalculator() {
+  const form = document.getElementById("cost-form");
+  form.addEventListener("submit", (event) => event.preventDefault());
+  form.addEventListener("input", updateCostCalculator);
+  document.querySelectorAll("[data-cost-mode]").forEach((button) => {
+    button.addEventListener("click", () => applyCostPreset(button.dataset.costMode, true));
+  });
+  document.getElementById("cost-reset").addEventListener("click", () => applyCostPreset(activeCostMode, false));
+  updateCostCalculator();
+}
+
 function setMode(modeName) {
   const data = modes[modeName];
   document.querySelectorAll("[data-mode]").forEach((button) => {
@@ -290,5 +430,6 @@ setMode("cold");
 setCalendar("oct");
 renderSeasonTable("2024-25");
 renderChart();
+setupCostCalculator();
 setupNavigation();
 setupReveal();

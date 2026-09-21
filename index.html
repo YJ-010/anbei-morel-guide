@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17372d">
-  <meta name="description" content="面向蚌埠及皖北地区，以D152和1201为主推菌种，提供冷棚、棉被棚羊肚菌栽培技术、近五季气温参考、关键节点和技术服务。">
+  <meta name="description" content="面向蚌埠及皖北地区，以D152和1201为主推菌种，提供冷棚、棉被棚羊肚菌栽培技术、种植成本测算、风险管理、近五季气温参考和技术服务。">
   <title>皖北羊肚菌种植技术服务平台｜D152 · 1201</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317372d'/%3E%3Cpath d='M10 16C10 9 12.7 4.8 16 4.8S22 9 22 16c0 2.5-1.6 4.4-4.2 5.1V27h-3.6v-5.9C11.6 20.4 10 18.5 10 16Z' fill='%23d6a24a'/%3E%3Cpath d='M12.3 9.2 16 7l3.7 2.2-2.1 2.2 2.4 2.3-2.6 2.1 2 2.1-3.4 1.5-3.4-1.5 2-2.1-2.6-2.1 2.4-2.3Z' fill='none' stroke='%2317372d' stroke-width='1.4'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./styles.css">
@@ -28,6 +28,7 @@
         <a href="#team">团队创新</a>
         <a href="#mode">棚型技术</a>
         <a href="#tech">关键技术</a>
+        <a href="#cost">成本风险</a>
         <a href="#disease">病虫识别</a>
         <a href="#weather">气温参考</a>
         <a href="#calendar">种植月历</a>
@@ -326,6 +327,104 @@
           <a class="tech-photo reveal" href="./assets/cultivation/high-vent.webp" target="_blank"><img src="./assets/cultivation/high-vent.webp" alt="棉被棚高位侧风口结构" loading="lazy"><span><small>风口设计</small><b>风口位置抬高，减少地面直吹</b></span></a>
           <a class="tech-photo reveal" href="./assets/cultivation/production-bed.webp" target="_blank"><img src="./assets/cultivation/production-bed.webp" alt="规模化棚内床面与通道布局" loading="lazy"><span><small>规模化巡棚</small><b>通道清晰，便于分区记录与及时采收</b></span></a>
           <a class="tech-photo reveal" href="./assets/cultivation/harvest-detail.webp" target="_blank"><img src="./assets/cultivation/harvest-detail.webp" alt="成熟羊肚菌菇型与菌柄细节" loading="lazy"><span><small>商品性观察</small><b>菇型、菌柄和成熟度同时看</b></span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cost-section" id="cost" aria-labelledby="cost-title">
+      <div class="wrap">
+        <div class="section-head split-head reveal">
+          <div><div class="eyebrow amber"><span></span>投入测算与风险管理</div><h2 id="cost-title">先算保本线，再决定种多少</h2></div>
+          <p>羊肚菌投入集中、产量与价格波动都较大。下面按1亩、1个生产季提供冷棚与棉被棚示例预设；所有数字均可修改，不是报价，也不代表承诺亩产或收益。</p>
+        </div>
+
+        <div class="cost-notice reveal" role="note">
+          <b>使用说明</b>
+          <p>示例默认菌种用量为400斤/亩，棚体费用按当季分摊填写。土地购买、新建永久设施、贷款利息、税费、冷链与烘干设备未统一计入，请按自己的合同和票据补充。</p>
+        </div>
+
+        <div class="cost-tool reveal">
+          <div class="cost-inputs">
+            <div class="calculator-heading">
+              <div><span>01</span><h3>填写本季预算</h3></div>
+              <button class="cost-reset" id="cost-reset" type="button">恢复当前棚型预设</button>
+            </div>
+
+            <div class="cost-mode-switch" role="group" aria-label="成本预设棚型">
+              <button class="cost-mode-button active" type="button" data-cost-mode="cold" aria-pressed="true"><b>冷棚</b><small>投入控制型预设</small></button>
+              <button class="cost-mode-button" type="button" data-cost-mode="warm" aria-pressed="false"><b>棉被棚 / 暖棚</b><small>设施调控型预设</small></button>
+            </div>
+
+            <form class="cost-form" id="cost-form">
+              <fieldset>
+                <legend>规模与销售参数</legend>
+                <label><span>种植面积<small>亩</small></span><input id="cost-area" type="number" min="0.1" step="0.1" value="1" inputmode="decimal"></label>
+                <label><span>鲜菇产量<small>kg/亩</small></span><input id="cost-yield" type="number" min="0" step="10" value="200" inputmode="decimal"></label>
+                <label><span>平均销售价<small>元/kg</small></span><input id="cost-price" type="number" min="0" step="1" value="80" inputmode="decimal"></label>
+              </fieldset>
+              <fieldset>
+                <legend>菌种成本</legend>
+                <label><span>菌种用量<small>斤/亩</small></span><input id="cost-spawn-amount" type="number" min="0" step="10" value="400" inputmode="decimal"></label>
+                <label><span>菌种单价<small>元/斤</small></span><input id="cost-spawn-price" type="number" min="0" step="0.1" value="8" inputmode="decimal"></label>
+                <div class="calculated-field"><span>菌种小计</span><b id="cost-spawn-subtotal">¥3,200/亩</b></div>
+              </fieldset>
+              <fieldset class="expense-fields">
+                <legend>其他每亩投入</legend>
+                <label><span>土地与土壤处理<small>元/亩</small></span><input id="cost-land" type="number" min="0" step="100" value="1000" inputmode="decimal"></label>
+                <label><span>棚体与材料分摊<small>元/亩</small></span><input id="cost-facility" type="number" min="0" step="100" value="2600" inputmode="decimal"></label>
+                <label><span>营养袋<small>元/亩</small></span><input id="cost-nutrition" type="number" min="0" step="100" value="2600" inputmode="decimal"></label>
+                <label><span>人工<small>元/亩</small></span><input id="cost-labor" type="number" min="0" step="100" value="2200" inputmode="decimal"></label>
+                <label><span>水电与耗材<small>元/亩</small></span><input id="cost-utilities" type="number" min="0" step="100" value="700" inputmode="decimal"></label>
+                <label><span>防控与预备金<small>元/亩</small></span><input id="cost-reserve" type="number" min="0" step="100" value="1200" inputmode="decimal"></label>
+              </fieldset>
+            </form>
+          </div>
+
+          <aside class="cost-results" aria-labelledby="cost-result-title" aria-live="polite">
+            <div class="result-heading"><span>02</span><div><small id="cost-mode-label">冷棚 · 1亩示例</small><h3 id="cost-result-title">本季测算结果</h3></div></div>
+            <div class="result-primary">
+              <span>预计利润 / 亏损</span>
+              <strong id="cost-profit">¥2,500</strong>
+              <small id="cost-profit-note">预计销售收入减去本季投入</small>
+            </div>
+            <dl class="cost-summary">
+              <div><dt>每亩总投入</dt><dd id="cost-per-mu">¥13,500</dd></div>
+              <div><dt>全部面积投入</dt><dd id="cost-total">¥13,500</dd></div>
+              <div><dt>预计销售收入</dt><dd id="cost-revenue">¥16,000</dd></div>
+              <div><dt>保本鲜菇产量</dt><dd id="cost-break-even-yield">168.8 kg/亩</dd></div>
+              <div><dt>保本平均售价</dt><dd id="cost-break-even-price">¥67.5/kg</dd></div>
+            </dl>
+            <div class="cost-breakdown" aria-label="每亩成本构成">
+              <div class="breakdown-label"><span>每亩成本构成</span><small>随输入实时变化</small></div>
+              <div class="breakdown-bar" id="cost-breakdown-bar"></div>
+              <div class="breakdown-legend" id="cost-breakdown-legend"></div>
+            </div>
+            <div class="stress-test">
+              <span>压力测试：产量减少30%且售价下降20%</span>
+              <b id="cost-stress-profit">亏损 ¥4,540</b>
+              <small id="cost-stress-note">压力情景收入 ¥8,960</small>
+            </div>
+            <p class="result-disclaimer">测算值为“收入减直接投入”的简化结果，不等于会计净利润；未售出、损耗、税费和新增设备应另行计入。</p>
+          </aside>
+        </div>
+
+        <div class="risk-register reveal" aria-labelledby="risk-register-title">
+          <div class="risk-register-head"><span>03</span><div><h3 id="risk-register-title">皖北生产六类重点风险</h3><p>风险不能全部消除，但可以在播种前确定观察指标、应对动作和止损边界。</p></div></div>
+          <div class="risk-grid">
+            <article><div><span class="risk-level high">高影响</span><b>天气与棚温</b></div><p>寒潮、暖冬、倒春寒、连阴雨和3月骤热都可能打乱发菌与出菇节奏。</p><strong>措施：看7—10天预报；记录棚温、地温；提前完成保温、通风、排水和加固。</strong></article>
+            <article><div><span class="risk-level high">高影响</span><b>菌种与批次</b></div><p>型号相同不代表每批活力、纯度和适应性完全一致，污染或退化会影响整棚。</p><strong>措施：D152、1201分棚记录；查资质、留样；新批次先做小区，不盲目扩大。</strong></article>
+            <article><div><span class="risk-level high">高影响</span><b>土壤、水分与病害</b></div><p>重茬、大水、积水、高温高湿和工具带土跨区，都会放大污染与病害风险。</p><strong>措施：优先轮作地；先排水再保湿；异常区先隔离取样，不凭图片盲目用药。</strong></article>
+            <article><div><span class="risk-level medium">中高影响</span><b>价格与销路</b></div><p>鲜菇集中上市、收购价变化、分级不一致和销售延误，会让测算收入明显下降。</p><strong>措施：播前确认收购、零售和烘干三条去向；按等级分别询价；用压力情景定规模。</strong></article>
+            <article><div><span class="risk-level medium">中高影响</span><b>设施与用电</b></div><p>大风雪、卷膜故障、停电和风口失灵，可能在短时间内造成超温、缺氧或棚体损伤。</p><strong>措施：自动卷膜保留手动应急；关键电机、线路和棚体节点定期检查并留备件。</strong></article>
+            <article><div><span class="risk-level medium">中高影响</span><b>现金流与人工</b></div><p>多数费用在出菇前发生，采收期又需要集中用工；面积越大，周转压力越高。</p><strong>措施：费用分“必须、可延后、预备金”三类；先落实采收人员和周转资金再定面积。</strong></article>
+          </div>
+        </div>
+
+        <div class="cost-decision reveal">
+          <div><span>播种前</span><b>拿到真实报价</b><p>菌种、营养袋、棚膜、人工和土地按同一生产季统一口径。</p></div>
+          <div><span>定面积前</span><b>做一次压力测试</b><p>至少按“产量−30%、售价−20%”检查资金是否还能承受。</p></div>
+          <div><span>生产中</span><b>按棚记成本与损耗</b><p>D152和1201分开记，才能找出真正影响收益的环节。</p></div>
+          <div><span>底线</span><b>不以最高亩产做预算</b><p>规模服从现金流、设施能力、销路和日常管理能力。</p></div>
         </div>
       </div>
     </section>
