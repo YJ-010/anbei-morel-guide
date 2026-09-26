@@ -80,35 +80,60 @@ const calendarData = {
     desc: "核对前茬、排水、土壤和水源，确定D152与1201的分棚方案，并建立温湿度、地温记录点。",
     tasks: ["清理地块并疏通棚内外排水沟", "检测土壤pH、EC并记录前茬", "检查棚膜、棉被、顶风口和侧风口"],
     watch: ["雨后24小时积水位置", "5厘米地温早晚变化", "未来7—10天降温趋势"],
-    risk: "未完成地块风险评估就定菌种，后期很难靠管理补救。"
+    risk: "未完成地块风险评估就定菌种，后期很难靠管理补救。",
+    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-01-site-soil.webp",
+    imageAlt: "10月棚体与基地准备图解",
+    caption: "10月 · 基地与棚体准备",
+    d152: "优先安排新茬或轮作地，提前核对排水能力，为后续控水留余地。",
+    m1201: "有重茬历史时仍要先评估病原基数，不能把品种适应性当作唯一保障。"
   },
   nov: {
     month: "11月", heading: "看地温播种，按萌发状态放袋",
     desc: "5厘米地温稳定降至约16℃或以下后，结合未来天气安排播种；每棚记录菌种型号、批次、播量和日期。",
     tasks: ["旋耕、播种、覆土并完成分棚标识", "播后观察萌发与污染点", "通常1—2周放置营养袋并检查贴土"],
     watch: ["地温是否回升", "床面含水是否均匀", "D152与1201各棚萌发差异"],
-    risk: "只按日期播种，或放袋后再大水补墒，都会增加污染与失控风险。"
+    risk: "只按日期播种，或放袋后再大水补墒，都会增加污染与失控风险。",
+    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-03-sowing.webp",
+    imageAlt: "11月播种与覆土操作图解",
+    caption: "11月 · 播种、覆土与放袋",
+    d152: "播种后重点保持均匀墒情，避免因追求早熟而提前补大水。",
+    m1201: "按棚型记录地温与萌发速度，分别建立冷棚、棉被棚批次档案。"
   },
   winter: {
     month: "12月—1月", heading: "促进吃料，等待充分生理成熟",
     desc: "皖北低温最集中。棉被棚可用光照适度提温，冷棚以环境稳定为先；正常温度下一周不吃料应及时排查。",
     tasks: ["连续记录营养袋重量和吃料进度", "寒潮前加固棚体并准备保温", "观察菌霜、原基和污染区域变化"],
     watch: ["发菌温度是否处于8—16℃", "夜间极端低温", "棚膜冷凝水与低洼积水"],
-    risk: "近五季极端最低温低至−11.5°C；但长期闷棚同样会带来高湿和缺氧。"
+    risk: "近五季极端最低温低至−11.5°C；但长期闷棚同样会带来高湿和缺氧。",
+    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-04-nutrition-bag.webp",
+    imageAlt: "12月至1月营养袋吸收与床面管理图解",
+    caption: "12月—1月 · 吃料与生理成熟",
+    d152: "保持环境稳定，关注营养袋吸收和床面水分，严防低洼积水。",
+    m1201: "观察不同棚型下的吃料与成熟速度，重茬棚持续巡查污染点。"
   },
   feb: {
     month: "2月", heading: "按成熟度与天气共同决定催菇",
     desc: "营养袋变轻、菌霜褪去、原基稳定并有报信菇后，再等待相对稳定天气，抓冷尾暖头操作。",
     tasks: ["对照记录确认营养袋吸收完成", "查看未来一周天气并备齐用水设备", "按土质分次试水并检查20厘米土层"],
     watch: ["原基是否稳定拔尖", "倒春寒与连续阴天", "浇水后的下渗与表面明水"],
-    risk: "D152不耐大水；过早、过量或排水不畅，都会放大病害和不整齐出菇风险。"
+    risk: "D152不耐大水；过早、过量或排水不畅，都会放大病害和不整齐出菇风险。",
+    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-05-induction-water.webp",
+    imageAlt: "2月催菇水与床面水分管理图解",
+    caption: "2月 · 成熟度核对与催菇试水",
+    d152: "催菇水从小区试水开始，黏土少量多次，尤其避免一次性大水。",
+    m1201: "同样以成熟度和天气为前提，不因适应面较宽而提前催菇。"
   },
   mar: {
     month: "3月", heading: "分阶段降湿增氧，及时采收",
     desc: "从原基、拔尖到幼菇和成菇，湿度逐步下降、通风逐步增加；棉被棚坚持见光不超温。",
     tasks: ["晴天提前通风并记录峰值棚温", "随菇体长大逐步增加高位换气", "分批采收并记录D152与1201商品性"],
     watch: ["中午棚温骤升", "长腿帽小等缺氧信号", "高湿区域白霉与幼菇软弱"],
-    risk: "历史3月日最高气温可达32.0°C，外界不热时棚内也可能已经过热。"
+    risk: "历史3月日最高气温可达32.0°C，外界不热时棚内也可能已经过热。",
+    image: "./assets/ppt/harvest-detail.webp",
+    imageAlt: "3月羊肚菌成熟度与采收状态",
+    caption: "3月 · 出菇管理与分批采收",
+    d152: "出菇靠前时及时分批采收，晴天优先防棚温快速升高。",
+    m1201: "按菇体成熟度安排采收，持续比较不同棚型下温、光、气、湿反应。"
   }
 };
 
@@ -119,146 +144,6 @@ const palette = {
   "2023-24": "#79a7d3",
   "2024-25": "#d8a4c8"
 };
-
-const costPresets = {
-  cold: {
-    label: "冷棚",
-    yield: 200,
-    price: 80,
-    spawnAmount: 400,
-    spawnPrice: 8,
-    land: 1000,
-    facility: 2600,
-    nutrition: 2600,
-    labor: 2200,
-    utilities: 700,
-    reserve: 1200
-  },
-  warm: {
-    label: "棉被棚 / 暖棚",
-    yield: 200,
-    price: 80,
-    spawnAmount: 400,
-    spawnPrice: 8,
-    land: 1000,
-    facility: 5200,
-    nutrition: 2600,
-    labor: 2800,
-    utilities: 1200,
-    reserve: 1500
-  }
-};
-
-const costFields = {
-  area: "cost-area",
-  yield: "cost-yield",
-  price: "cost-price",
-  spawnAmount: "cost-spawn-amount",
-  spawnPrice: "cost-spawn-price",
-  land: "cost-land",
-  facility: "cost-facility",
-  nutrition: "cost-nutrition",
-  labor: "cost-labor",
-  utilities: "cost-utilities",
-  reserve: "cost-reserve"
-};
-
-let activeCostMode = "cold";
-const wholeNumber = new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 0 });
-const oneDecimal = new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-
-function readCostNumber(key) {
-  const value = Number(document.getElementById(costFields[key]).value);
-  return Number.isFinite(value) && value >= 0 ? value : 0;
-}
-
-function formatMoney(value) {
-  return `¥${wholeNumber.format(Math.abs(Math.round(value)))}`;
-}
-
-function renderCostBreakdown(items, total) {
-  const bar = document.getElementById("cost-breakdown-bar");
-  const legend = document.getElementById("cost-breakdown-legend");
-  bar.replaceChildren();
-  legend.replaceChildren();
-  items.forEach((item) => {
-    if (item.value > 0 && total > 0) {
-      const segment = document.createElement("i");
-      segment.style.width = `${(item.value / total) * 100}%`;
-      segment.style.background = item.color;
-      segment.title = `${item.label}：${formatMoney(item.value)}/亩`;
-      bar.appendChild(segment);
-    }
-    const label = document.createElement("span");
-    const dot = document.createElement("i");
-    dot.style.background = item.color;
-    label.append(dot, document.createTextNode(`${item.label} ${formatMoney(item.value)}`));
-    legend.appendChild(label);
-  });
-}
-
-function updateCostCalculator() {
-  const area = readCostNumber("area");
-  const freshYield = readCostNumber("yield");
-  const salePrice = readCostNumber("price");
-  const spawnCost = readCostNumber("spawnAmount") * readCostNumber("spawnPrice");
-  const items = [
-    { label: "菌种", value: spawnCost, color: "#d6a24a" },
-    { label: "土地土壤", value: readCostNumber("land"), color: "#8fc7a5" },
-    { label: "棚体材料", value: readCostNumber("facility"), color: "#79a7d3" },
-    { label: "营养袋", value: readCostNumber("nutrition"), color: "#d8a4c8" },
-    { label: "人工", value: readCostNumber("labor"), color: "#dd8d64" },
-    { label: "水电耗材", value: readCostNumber("utilities"), color: "#a5b77a" },
-    { label: "防控预备", value: readCostNumber("reserve"), color: "#bd8875" }
-  ];
-  const perMu = items.reduce((sum, item) => sum + item.value, 0);
-  const total = perMu * area;
-  const revenue = freshYield * salePrice * area;
-  const profit = revenue - total;
-  const stressRevenue = freshYield * 0.7 * salePrice * 0.8 * area;
-  const stressProfit = stressRevenue - total;
-  const areaLabel = Number.isInteger(area) ? area.toFixed(0) : area.toFixed(1);
-
-  document.getElementById("cost-mode-label").textContent = `${costPresets[activeCostMode].label} · ${areaLabel}亩测算`;
-  document.getElementById("cost-spawn-subtotal").textContent = `${formatMoney(spawnCost)}/亩`;
-  document.getElementById("cost-per-mu").textContent = `${formatMoney(perMu)}/亩`;
-  document.getElementById("cost-total").textContent = formatMoney(total);
-  document.getElementById("cost-revenue").textContent = formatMoney(revenue);
-  document.getElementById("cost-profit").textContent = `${profit < 0 ? "−" : ""}${formatMoney(profit)}`;
-  document.getElementById("cost-profit-note").textContent = profit < 0 ? "当前参数下预计收入低于本季投入" : "预计销售收入减去本季投入";
-  document.querySelector(".result-primary").classList.toggle("loss", profit < 0);
-  document.getElementById("cost-break-even-yield").textContent = salePrice > 0 ? `${(perMu / salePrice).toFixed(1)} kg/亩` : "售价需大于0";
-  document.getElementById("cost-break-even-price").textContent = freshYield > 0 ? `¥${oneDecimal.format(perMu / freshYield)}/kg` : "产量需大于0";
-  document.getElementById("cost-stress-profit").textContent = `${stressProfit < 0 ? "亏损" : "结余"} ${formatMoney(stressProfit)}`;
-  document.getElementById("cost-stress-note").textContent = `压力情景收入 ${formatMoney(stressRevenue)}`;
-  renderCostBreakdown(items, perMu);
-}
-
-function applyCostPreset(mode, keepArea = true) {
-  activeCostMode = mode;
-  const preset = costPresets[mode];
-  document.querySelectorAll("[data-cost-mode]").forEach((button) => {
-    const active = button.dataset.costMode === mode;
-    button.classList.toggle("active", active);
-    button.setAttribute("aria-pressed", String(active));
-  });
-  Object.entries(preset).forEach(([key, value]) => {
-    if (key !== "label") document.getElementById(costFields[key]).value = value;
-  });
-  if (!keepArea) document.getElementById(costFields.area).value = 1;
-  updateCostCalculator();
-}
-
-function setupCostCalculator() {
-  const form = document.getElementById("cost-form");
-  form.addEventListener("submit", (event) => event.preventDefault());
-  form.addEventListener("input", updateCostCalculator);
-  document.querySelectorAll("[data-cost-mode]").forEach((button) => {
-    button.addEventListener("click", () => applyCostPreset(button.dataset.costMode, true));
-  });
-  document.getElementById("cost-reset").addEventListener("click", () => applyCostPreset(activeCostMode, false));
-  updateCostCalculator();
-}
 
 function setMode(modeName) {
   const data = modes[modeName];
@@ -370,6 +255,13 @@ function setCalendar(key) {
   document.getElementById("calendar-tasks").innerHTML = data.tasks.map((item) => `<li>${item}</li>`).join("");
   document.getElementById("calendar-watch").innerHTML = data.watch.map((item) => `<li>${item}</li>`).join("");
   document.getElementById("calendar-risk").textContent = data.risk;
+  const image = document.getElementById("calendar-image");
+  image.src = data.image;
+  image.alt = data.imageAlt;
+  document.getElementById("calendar-image-link").href = data.image;
+  document.getElementById("calendar-image-caption").textContent = data.caption;
+  document.getElementById("calendar-d152").textContent = data.d152;
+  document.getElementById("calendar-1201").textContent = data.m1201;
 }
 
 function setupNavigation() {
@@ -416,20 +308,9 @@ function setupReveal() {
 document.querySelectorAll("[data-mode]").forEach((button) => button.addEventListener("click", () => setMode(button.dataset.mode)));
 document.querySelectorAll(".calendar-tab").forEach((button) => button.addEventListener("click", () => setCalendar(button.dataset.month)));
 document.getElementById("season-select").addEventListener("change", (event) => renderSeasonTable(event.target.value));
-document.querySelector(".copy-button").addEventListener("click", async (event) => {
-  const status = document.getElementById("copy-status");
-  try {
-    await navigator.clipboard.writeText(event.currentTarget.dataset.copy);
-    status.textContent = "电话号码已复制。";
-  } catch {
-    status.textContent = "请长按号码复制：18155204187";
-  }
-});
-
 setMode("cold");
 setCalendar("oct");
 renderSeasonTable("2024-25");
 renderChart();
-setupCostCalculator();
 setupNavigation();
 setupReveal();
