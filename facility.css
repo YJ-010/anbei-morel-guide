@@ -1,0 +1,24 @@
+/* Facility recommendations: water source, overhead irrigation, and greenhouse size. */
+.facility-config { margin: 0 0 30px; scroll-margin-top: 100px; }
+.facility-heading { margin-bottom: 20px; }
+.facility-heading > span { color: #8a6228; font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+.facility-heading h3 { margin: 8px 0 10px; color: var(--forest); font-family: "Noto Serif SC", "Songti SC", serif; font-size: 27px; line-height: 1.5; }
+.facility-heading p { margin: 0; color: var(--muted); font-size: 14px; }
+.facility-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.facility-card { display: flex; flex-direction: column; padding: 27px; border: 1px solid var(--line); border-radius: 20px; background: #fff; }
+.facility-number { color: #8a6228; font-size: 12px; font-weight: 800; }
+.facility-card h4 { margin: 17px 0 12px; color: var(--forest); font-size: 22px; line-height: 1.5; }
+.facility-card p { margin: 0 0 22px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.facility-card > b { margin-top: auto; color: var(--forest); font-size: 13px; }
+.facility-card-accent { border-color: var(--forest); background: var(--forest); }
+.facility-card-accent .facility-number, .facility-card-accent > b { color: var(--amber-soft); }
+.facility-card-accent h4 { color: #fff; }
+.facility-card-accent p { color: rgba(255,255,255,.8); }
+@media (max-width: 900px) {
+  .facility-grid { grid-template-columns: 1fr; }
+  .facility-card { padding: 24px; }
+}
+@media (max-width: 620px) {
+  .facility-config { scroll-margin-top: 82px; }
+  .facility-heading h3 { font-size: 24px; }
+}
