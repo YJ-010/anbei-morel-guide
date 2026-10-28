@@ -81,21 +81,15 @@ const calendarData = {
     tasks: ["清理地块并疏通棚内外排水沟", "检测土壤pH、EC并记录前茬", "检查棚膜、棉被、顶风口和侧风口"],
     watch: ["雨后24小时积水位置", "5厘米地温早晚变化", "未来7—10天降温趋势"],
     risk: "未完成地块风险评估就定菌种，后期很难靠管理补救。",
-    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-01-site-soil.webp",
-    imageAlt: "10月棚体与基地准备图解",
-    caption: "10月 · 基地与棚体准备",
     d152: "优先安排新茬或轮作地，提前核对排水能力，为后续控水留余地。",
     m1201: "有重茬历史时仍要先评估病原基数，不能把品种适应性当作唯一保障。"
   },
   nov: {
     month: "11月", heading: "看地温播种，按萌发状态放袋",
-    desc: "5厘米地温稳定降至约16℃或以下后，结合未来天气安排播种；每棚记录菌种型号、批次、播量和日期。",
-    tasks: ["旋耕、播种、覆土并完成分棚标识", "播后观察萌发与污染点", "通常1—2周放置营养袋并检查贴土"],
+    desc: "5厘米地温稳定低于15℃后，结合未来天气安排播种；每棚记录菌种型号、批次、播量和日期。",
+    tasks: ["旋耕、播种、覆土并完成分棚标识", "播后观察萌发与污染点", "按实际播后约10—15天、菌丝状态放袋并检查贴土"],
     watch: ["地温是否回升", "床面含水是否均匀", "D152与1201各棚萌发差异"],
     risk: "只按日期播种，或放袋后再大水补墒，都会增加污染与失控风险。",
-    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-03-sowing.webp",
-    imageAlt: "11月播种与覆土操作图解",
-    caption: "11月 · 播种、覆土与放袋",
     d152: "播种后重点保持均匀墒情，避免因追求早熟而提前补大水。",
     m1201: "按棚型记录地温与萌发速度，分别建立冷棚、棉被棚批次档案。"
   },
@@ -105,21 +99,15 @@ const calendarData = {
     tasks: ["连续记录营养袋重量和吃料进度", "寒潮前加固棚体并准备保温", "观察菌霜、原基和污染区域变化"],
     watch: ["发菌温度是否处于8—16℃", "夜间极端低温", "棚膜冷凝水与低洼积水"],
     risk: "近五季极端最低温低至−11.5°C；但长期闷棚同样会带来高湿和缺氧。",
-    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-04-nutrition-bag.webp",
-    imageAlt: "12月至1月营养袋吸收与床面管理图解",
-    caption: "12月—1月 · 吃料与生理成熟",
     d152: "保持环境稳定，关注营养袋吸收和床面水分，严防低洼积水。",
     m1201: "观察不同棚型下的吃料与成熟速度，重茬棚持续巡查污染点。"
   },
   feb: {
     month: "2月", heading: "按成熟度与天气共同决定催菇",
-    desc: "营养袋变轻、菌霜褪去、原基稳定并有报信菇后，再等待相对稳定天气，抓冷尾暖头操作。",
-    tasks: ["对照记录确认营养袋吸收完成", "查看未来一周天气并备齐用水设备", "按土质分次试水并检查20厘米土层"],
+    desc: "营养袋吸收充分、菌霜大部消退并出现少量原基后，核对3—4厘米最低地温稳定在6℃以上及后续天气，再确定催菇日。",
+    tasks: ["对照记录确认营养袋吸收完成", "查看未来一周天气并备齐用水设备", "按土质分次试水，检查湿润深度与排水"],
     watch: ["原基是否稳定拔尖", "倒春寒与连续阴天", "浇水后的下渗与表面明水"],
     risk: "D152不耐大水；过早、过量或排水不畅，都会放大病害和不整齐出菇风险。",
-    image: "https://wanbei-morel-guide.cheery-bread-3483.chatgpt.site/assets/manuals/cultivation-05-induction-water.webp",
-    imageAlt: "2月催菇水与床面水分管理图解",
-    caption: "2月 · 成熟度核对与催菇试水",
     d152: "催菇水从小区试水开始，黏土少量多次，尤其避免一次性大水。",
     m1201: "同样以成熟度和天气为前提，不因适应面较宽而提前催菇。"
   },
@@ -129,9 +117,6 @@ const calendarData = {
     tasks: ["晴天提前通风并记录峰值棚温", "随菇体长大逐步增加高位换气", "分批采收并记录D152与1201商品性"],
     watch: ["中午棚温骤升", "长腿帽小等缺氧信号", "高湿区域白霉与幼菇软弱"],
     risk: "历史3月日最高气温可达32.0°C，外界不热时棚内也可能已经过热。",
-    image: "./assets/ppt/harvest-detail.webp",
-    imageAlt: "3月羊肚菌成熟度与采收状态",
-    caption: "3月 · 出菇管理与分批采收",
     d152: "出菇靠前时及时分批采收，晴天优先防棚温快速升高。",
     m1201: "按菇体成熟度安排采收，持续比较不同棚型下温、光、气、湿反应。"
   }
@@ -255,11 +240,6 @@ function setCalendar(key) {
   document.getElementById("calendar-tasks").innerHTML = data.tasks.map((item) => `<li>${item}</li>`).join("");
   document.getElementById("calendar-watch").innerHTML = data.watch.map((item) => `<li>${item}</li>`).join("");
   document.getElementById("calendar-risk").textContent = data.risk;
-  const image = document.getElementById("calendar-image");
-  image.src = data.image;
-  image.alt = data.imageAlt;
-  document.getElementById("calendar-image-link").href = data.image;
-  document.getElementById("calendar-image-caption").textContent = data.caption;
   document.getElementById("calendar-d152").textContent = data.d152;
   document.getElementById("calendar-1201").textContent = data.m1201;
 }
