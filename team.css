@@ -1,0 +1,25 @@
+/* Restore the existing team introduction and keep all portraits readable. */
+.restored-team .wrap { position: relative; }
+.restored-team .section-head { margin-bottom: 24px; }
+.team-focus { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 28px; }
+.team-focus > span { padding: 5px 14px; border: 1px solid #c6d3c5; border-radius: 999px; background: #f8faf6; color: #33553e; font-size: 13px; font-weight: 650; }
+.restored-team .member-card { grid-template-rows: 280px 1fr; background: #fff; }
+.restored-team .member-card > img { object-fit: contain; object-position: center; background: #e1e8df; }
+.restored-team .lead-member { border-color: #a4b69f; }
+.restored-team .member-card p { line-height: 1.85; }
+@media (min-width: 861px) and (max-width: 1120px) {
+  .site-nav { gap: 10px; font-size: 12px; }
+  .header-inner { gap: 16px; }
+}
+@media (max-width: 620px) {
+  .restored-team .member-card { grid-template-columns: 122px minmax(0, 1fr); grid-template-rows: auto; }
+  .restored-team .member-card > img { min-height: 0; align-self: start; height: 162px; margin-top: 22px; }
+  .restored-team .member-card > div { padding: 20px 16px; }
+  .restored-team .member-card h4 { font-size: 22px; }
+  .restored-team .member-card span { font-size: 11px; letter-spacing: 0; }
+}
+@media (max-width: 370px) {
+  .restored-team .member-card { grid-template-columns: 102px minmax(0, 1fr); }
+  .restored-team .member-card > img { height: 142px; }
+  .restored-team .member-card > div { padding: 18px 12px; }
+}
