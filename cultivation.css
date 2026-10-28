@@ -40,7 +40,7 @@
 .calendar-text-panel .calendar-main h3 { margin-top: 14px; }
 .calendar-process-link { width: fit-content; color: var(--amber-soft); font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
 .manual-text-grid .manual-card { padding-top: 21px; }
-.manual-step-label { display: block; margin: 0 24px 4px; color: var(--amber-soft); font-size: 12px; font-weight: 800; letter-spacing: .06em; }
+.manual-step-label { display: block; margin: 0 20px 4px; color: #856025; font-size: 12px; font-weight: 800; letter-spacing: .06em; }
 .manual-text-grid .manual-card > div { padding-top: 10px; }
 @media (max-width: 960px) {
   .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
