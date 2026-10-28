@@ -1,0 +1,10 @@
+/* Pre-sowing treatment notes and verification status. */
+#pre-sowing-pest, #pre-sowing-lime, #soil-treatment { scroll-margin-top: 105px; }
+.soil-updated .dose-card > strong { font-size: 27px; line-height: 1.45; }
+.soil-updated .dose-card > p + p { margin-top: 14px; }
+.soil-updated .soil-source a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 620px) {
+  #pre-sowing-pest, #pre-sowing-lime, #soil-treatment { scroll-margin-top: 82px; }
+  .soil-updated .dose-card > strong { font-size: 25px; }
+  .soil-updated #soil-title { font-size: 24px; line-height: 1.5; }
+}
